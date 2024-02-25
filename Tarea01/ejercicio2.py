@@ -83,13 +83,16 @@ traduccion = traduccion_adn(transcripcion_adn)
 print("Cantidad de caracteres: ")
 print(cantidad_caracteres)
 
+print("Cantidad de T (Timina) en la secuencia: ")
+print(texto_fasta_sin_encabezados.count("T"))
+
 print("Longitud de la cadena de ADN: ")
 print(len(texto_fasta_sin_encabezados))
 
 print("Longitud de la cadena de replicación: ")
 print(len(replicacion_adn))
 
-print("Longitud de la cadena de transcripción: ")
+print("Longitud de la cadena de transcripción ARNm: ")
 print(len(transcripcion_adn))
 
 print("Longitud de la cadena de traducción: ")
