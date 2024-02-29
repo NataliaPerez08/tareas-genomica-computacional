@@ -7,13 +7,6 @@ def importar_fasta_como_texto_sin_encabezados(archivo_fasta):
 
     return contenido_sin_encabezados
 
-#importar el archivo
-archivo_fasta = 'bicho_yellowstone.fasta'  
-texto_fasta_sin_encabezados  = importar_fasta_como_texto_sin_encabezados(archivo_fasta)
-
-cantidad_caracteres = len(texto_fasta_sin_encabezados)
-
-
 def traducir_codones(texto_fasta_sin_encabezados):
     translation = ""
     
@@ -73,6 +66,11 @@ def traduccion_adn(cadena_adn):
     cadena_adn = traducir_codones(cadena_adn)
     return cadena_adn
 
+#importar el archivo
+archivo_fasta = 'Tarea01/bicho_yellowstone.fasta'  
+texto_fasta_sin_encabezados  = importar_fasta_como_texto_sin_encabezados(archivo_fasta)
+
+cantidad_caracteres = len(texto_fasta_sin_encabezados)
 
 replicacion_adn = replicacion_adn(texto_fasta_sin_encabezados)
 transcripcion_adn = transcripcion_adn(replicacion_adn)
@@ -97,3 +95,7 @@ print(len(transcripcion_adn))
 
 print("Longitud de la cadena de traducción: ")
 print(len(traduccion))
+
+# Crear un archivo de texto con la cadena de traducción
+with open('Tarea01/traduccion.txt', 'w') as f:
+    f.write(traduccion)
